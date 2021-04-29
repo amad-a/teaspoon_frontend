@@ -7,7 +7,7 @@ import Navigation from './Navigation'
 
 import uuid from 'uuid/v4';
 
-const fetch = require("node-fetch");
+//const fetch = require("node-fetch");
 
 const Cooking = () => {
 
@@ -42,7 +42,7 @@ const Cooking = () => {
             return;
         }
         
-        const search_req = `/?term=${searchTerm}&site=${site}`;     
+        const search_req = `https://teaspoonapp.herokuapp.com/?term=${searchTerm}&site=${site}`;     
         const result = await fetch(search_req)
         const search_json = await result.json();
 
