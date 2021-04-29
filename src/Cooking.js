@@ -42,7 +42,7 @@ const Cooking = () => {
             return;
         }
         
-        const search_req = `http://localhost:8080/?term=${searchTerm}&site=${site}`;     
+        const search_req = `/?term=${searchTerm}&site=${site}`;     
         const result = await fetch(search_req)
         const search_json = await result.json();
 
@@ -130,12 +130,13 @@ const Cooking = () => {
                 <div className="info-text">
                     teaspoon is web app that allows you to search and save recipes from a selection of recipe websites,
                     as well as generating a grocery list from them.
-                    the app is an attempt to make a universal interface 
+                    the app is an attempt to make a universal interface/platform for recipes on the web, which can be fragmented
                     you can 
-                    <br></br><br></br>
-                    the app is a work in progress, and some . please email bugs@teaspoon.fun if you find anything or have any feature requests!
+
                     <br></br><br></br>
                     teaspoon was created by amad ansari using react, express, and node.js. you can find his other projects here.
+                    <br></br><br></br>
+                    the app is a work in progress, and . please email amad@nyu.edu if you find anything or have any feature requests!
 
                 </div>
             </div>
