@@ -49,11 +49,10 @@ const ListView = (props) => {
     return (
         <div className="container">
             <div className="box" key={uuid()} onClick={handleClick}>
-                {title_case(props.name)}
+                <div className="box-recipe">{title_case(props.name)}</div>
                 <div className="box-site">{convert(props.site)}</div>
-                
+                <div className="recipe-delete-button" onClick={() => deleteItem(props.name)}>╳</div>
             </div>
-            <button className="recipe-delete-button" onClick={() => deleteItem(props.name)}><h2>╳</h2></button>
         </div>
     )
 }

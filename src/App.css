@@ -214,6 +214,9 @@ div {
 }
 
 .box {
+  display: grid;
+  grid-template-columns: 8;
+  grid-template-rows: 3;
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: black;
@@ -227,7 +230,21 @@ div {
   overflow-x: hidden;
 }
 
+.box-recipe {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: left;
+}
+
 .box-site {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 3;
+  grid-row-end: 3;
   font-family: "Work Sans", sans-serif;
   font-size: 15px;
   padding: 10px 0px 5px 0px;
@@ -236,16 +253,14 @@ div {
   background-color: transparent;
 }
 
-.box-site:hover {
-  background-color: #000000;
-}
-
 .recipe-delete-button {
+  grid-column-start: 7;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 2;
   font-size: 16px;
   font-weight: bolder;
-  border-width: 0px 0px 2px 0px;
-  border-style: solid;
-  border-color: black;
+
   padding-right: 10px;
 }
 
@@ -504,6 +519,7 @@ a:visited {
   margin: 0px 0px 0px 0px;
   width: 100%;
   height: auto;
+  background-color: transparent;
 }
 
 /*MEDIA*/
@@ -659,6 +675,11 @@ a:visited {
   }
 
   .box {
+    display: grid;
+    gap: 8px;
+    height: min-content;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     border-bottom-width: 2px;
     border-bottom-style: solid;
     border-bottom-color: black;
@@ -666,16 +687,33 @@ a:visited {
     font-size: 25px;
     font-weight: 600;
     text-align: left;
-    padding: 15px 0px 15px 20px;
+    padding: 10px 0px 10px 15px;
     margin: 0px 0px 0px 0px;
     width: 95vw;
+    overflow-x: hidden;
+  }
+
+  .box-recipe {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: left;
+    margin: 0px;
     background-color: transparent;
   }
 
   .box-site {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    margin-top: 0px;
     font-family: "Work Sans", sans-serif;
     font-size: 15px;
-    padding: 10px 0px 5px 0px;
+    padding: 0px 0px 8px 0px;
     font-weight: 400;
     text-align: left;
     background-color: transparent;
@@ -686,15 +724,19 @@ a:visited {
   }
 
   .recipe-delete-button {
-    font-size: 16px;
+    display: grid;
+    align-content: center;
+    grid-column-start: 8;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-size: 20px;
     font-weight: bolder;
-    border-width: 0px 0px 2px 0px;
-    border-style: solid;
-    border-color: black;
-    padding-right: 0px;
+    background-color: transparent;
   }
 
   .box:hover {
+    background-color: black;
     color: #ffe4e1;
     cursor: pointer;
   }
@@ -960,5 +1002,72 @@ a:visited {
 
   .info-box {
     width: 446px;
+  }
+
+  .box {
+    display: grid;
+    gap: 8px;
+    height: min-content;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    font-family: "Work Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px 0px 10px 15px;
+    margin: 0px 0px 0px 0px;
+    width: 95vw;
+    overflow-x: hidden;
+  }
+
+  .box-recipe {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: left;
+    margin: 0px;
+    background-color: transparent;
+  }
+
+  .box-site {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    margin-top: 0px;
+    font-family: "Work Sans", sans-serif;
+    font-size: 15px;
+    padding: 0px 0px 8px 0px;
+    font-weight: 400;
+    text-align: left;
+    background-color: transparent;
+  }
+
+  .box-site:hover {
+    background-color: #000000;
+  }
+
+  .recipe-delete-button {
+    display: grid;
+    align-content: center;
+    grid-column-start: 8;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: transparent;
+  }
+
+  .box:hover {
+    background-color: black;
+    color: #ffe4e1;
+    cursor: pointer;
   }
 }
