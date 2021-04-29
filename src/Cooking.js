@@ -4,7 +4,7 @@ import ListView from './ListView';
 import RecipeView from './RecipeView'
 import GroceryListView from './GroceryListView'
 import Navigation from './Navigation'
-import uuid from 'uuid';
+import { v4 as uuid } from 'uuid';
 
 //const fetch = require("node-fetch");
 
