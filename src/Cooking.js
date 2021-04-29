@@ -6,6 +6,7 @@ import GroceryListView from './GroceryListView'
 import Navigation from './Navigation'
 import { v4 as uuid } from 'uuid';
 
+
 //const fetch = require("node-fetch");
 
 const Cooking = () => {
@@ -49,10 +50,17 @@ const Cooking = () => {
                 console.log("already saved!");
                 return;
         }
+
+        else if (search_json.dish && search_json.steps && search_json.ingredients && search_json.img){
+            console.log(search_json.url)
+            setRecipeList([{text: search_json, key: uuid()}, ...recipeList]);
+            setGroceryList([...groceryList.concat(search_json.parsed_ingredients)].filter(onlyUnique))
+        }
         
-        console.log(search_json.url)
-        setRecipeList([{text: search_json, key: uuid()}, ...recipeList]);
-        setGroceryList([...groceryList.concat(search_json.parsed_ingredients)].filter(onlyUnique))
+        else {
+            console.log("suitable recipe not found")
+            return;
+        }
         
     }
 
