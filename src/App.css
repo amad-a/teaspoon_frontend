@@ -149,7 +149,27 @@ p {
   grid-row-start: 1;
   text-align: right;
   font-size: 30px;
-  margin-top: -10px;
+  margin-top: -5px;
+}
+
+.personal-site-link {
+  text-decoration: underline;
+}
+
+.info-back:hover {
+  cursor: pointer;
+}
+
+.about {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  margin-left: 10px;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  text-align: left;
+  font-size: 20px;
+  margin-top: -5px;
 }
 
 .info-text {

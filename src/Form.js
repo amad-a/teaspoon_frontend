@@ -3,7 +3,7 @@ import React from "react";
 const Form = props => (
 	<div className="container">
 	<div className="search-container">
-	<form onSubmit={props.req}>
+	<form onSubmit={props.request}>
 		<input type="text" className="Textbox" name="searchTerm" placeholder="enter recipe"/>
 		
 		<div className="search-button-container">
@@ -13,7 +13,7 @@ const Form = props => (
     		<option value="seriouseats">Serious Eats</option>
     		<option value="epicurious">Epicurious</option>
   		</select>
-		<button className="Search-button">Search</button>
+		<button className="Search-button">{props.searchButton}</button>
 		</div>
 	</form>
 	</div>
